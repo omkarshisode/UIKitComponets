@@ -11,6 +11,7 @@ class PickerViewController: UIViewController {
 
     private var pickerView = UIPickerView()
     private var label = AppLabel()
+    static var counterDelegate: CounterDelegate?
     
     private let names = ["Omkar", "Prachi", "Shrikant", "Prakash", "Renuka", "Parvati"]
     
@@ -61,6 +62,7 @@ extension PickerViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         label.text = names[row]
+        PickerViewController.counterDelegate?.increaseCount(row)
     }
 }
 

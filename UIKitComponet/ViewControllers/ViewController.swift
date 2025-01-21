@@ -7,7 +7,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CounterDelegate {
+    
+    func increaseCount(_ count: Int) {
+        countLable.text = String(count)
+    }
+        
+    private let countLable: AppLabel = {
+        let _appLable = AppLabel()
+        _appLable.text = "0"
+        _appLable.textColor = .gray
+        _appLable.translatesAutoresizingMaskIntoConstraints = false
+        return _appLable
+    }()
     
     private let emailTextField: AppTextField = {
         let _appTextField = AppTextField()
@@ -61,16 +73,27 @@ class ViewController: UIViewController {
         return _appButton
     }()
     
+    private let increaseCountButton: AppButton = {
+        let _appButton = AppButton()
+        _appButton.setTitle("Incrase Count", for: .normal)
+        _appButton.translatesAutoresizingMaskIntoConstraints = false
+        return _appButton
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
+        // Assing to the delegate
+       
+        PickerViewController.counterDelegate = self
         // Show loader to test it working or not
         Loader.show(on: view)
-        
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
             // Hide loader after 3 seconds
             Loader.hide()
-            
+            // Add the count label
+            self.addCountLable()
+            self.increaseCountButton.addTarget(self, action: #selector(self.onIncreaseCountButtonClick), for: .touchUpInside)
             // Add the stack view to the actual view
             self.addButtonToStackView()
             
@@ -86,6 +109,16 @@ class ViewController: UIViewController {
         }
     }
     
+    private func addCountLable() {
+        view.addSubview(countLable)
+        NSLayoutConstraint.activate([
+            countLable.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
+            countLable.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            countLable.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            countLable.heightAnchor.constraint(equalToConstant: 50),
+            countLable.widthAnchor.constraint(equalToConstant: 100),
+        ])
+    }
     /// Prepare stack view and add the parent view
     private func addButtonToStackView() {
         // Add all the view to stackView vertically
@@ -94,6 +127,7 @@ class ViewController: UIViewController {
         buttonStackView.addArrangedSubview(spacerView)
         buttonStackView.addArrangedSubview(authenticateUserButton)
         buttonStackView.addArrangedSubview(resetPasswordButton)
+//        buttonStackView.addArrangedSubview(increaseCountButton)
         
         // Add the stackView to the view
         view.addSubview(buttonStackView)
@@ -178,5 +212,7 @@ class ViewController: UIViewController {
         
     }
     
+    @objc private func onIncreaseCountButtonClick() {
+    }
 }
 
