@@ -132,28 +132,28 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "E7CCA3B3-2F8B-475F-8471-5ADE8A9E1FD8 - 608511a99de09494"
+                  uuid = "E7CCA3B3-2F8B-475F-8471-5ADE8A9E1FD8 - ba08ff0dbcf4f2e4"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "UIKitComponet.ViewController.authenticateUser() -&gt; ()"
                   moduleName = "UIKitComponet"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/omkar/Documents/Projects/UIKitComponet/UIKitComponet/ViewControllers/ViewController.swift"
+                  urlString = "file:///Users/omkar/Documents/UIKitComponetsPractices/UIKitComponet/UIKitComponet/ViewControllers/ViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "194"
                   endingLineNumber = "194">
                </Location>
                <Location
-                  uuid = "E7CCA3B3-2F8B-475F-8471-5ADE8A9E1FD8 - 608511a99de09494"
+                  uuid = "E7CCA3B3-2F8B-475F-8471-5ADE8A9E1FD8 - ba08ff0dbcf4f2e4"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "UIKitComponet.ViewController.authenticateUser() -&gt; ()"
                   moduleName = "UIKitComponet"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/omkar/Documents/Projects/UIKitComponet/UIKitComponet/ViewControllers/ViewController.swift"
+                  urlString = "file:///Users/omkar/Documents/UIKitComponetsPractices/UIKitComponet/UIKitComponet/ViewControllers/ViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "194"
@@ -182,7 +182,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "D9188BCA-3449-4FE9-9E64-D0FF1535B488"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UIKitComponet/ViewControllers/ViewController.swift"

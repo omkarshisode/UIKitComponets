@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B644C5EF2D3F9B01008BD5CC /* CountDownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B644C5EE2D3F9B01008BD5CC /* CountDownTimer.swift */; };
 		B689A2322D16BB4F003E6990 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B689A2312D16BB4F003E6990 /* Alert.swift */; };
 		B689A2342D16F189003E6990 /* ContractListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B689A2332D16F189003E6990 /* ContractListViewController.swift */; };
 		B689A2372D174FBF003E6990 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = B689A2362D174FBF003E6990 /* Contact.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B644C5EE2D3F9B01008BD5CC /* CountDownTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownTimer.swift; sourceTree = "<group>"; };
 		B689A2312D16BB4F003E6990 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		B689A2332D16F189003E6990 /* ContractListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractListViewController.swift; sourceTree = "<group>"; };
 		B689A2362D174FBF003E6990 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
@@ -77,6 +79,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B644C5ED2D3F9AE0008BD5CC /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B644C5EE2D3F9B01008BD5CC /* CountDownTimer.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		B689A2352D174FB0003E6990 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +151,7 @@
 		B6CAFDAB2D134B3500A5F1DF /* UIKitComponet */ = {
 			isa = PBXGroup;
 			children = (
+				B644C5ED2D3F9AE0008BD5CC /* Helper */,
 				B6B0BE242D3D263C00CB336D /* Protocol */,
 				B6B0BE232D3D262400CB336D /* Delegates */,
 				B689A2392D175252003E6990 /* ViewControllers */,
@@ -271,6 +282,7 @@
 				B6CAFDD32D14530900A5F1DF /* AppButton.swift in Sources */,
 				B689A2342D16F189003E6990 /* ContractListViewController.swift in Sources */,
 				B689A2452D1879A9003E6990 /* PickerViewController.swift in Sources */,
+				B644C5EF2D3F9B01008BD5CC /* CountDownTimer.swift in Sources */,
 				B689A23D2D1780A1003E6990 /* ImageViewController.swift in Sources */,
 				B6CAFDD52D147ED300A5F1DF /* Loader.swift in Sources */,
 				B689A2322D16BB4F003E6990 /* Alert.swift in Sources */,

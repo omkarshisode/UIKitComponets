@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+class CountDownTimer {
+    private var timer: Timer?
+    private var secondRemaning: Int
+
+    
+    init(secondRemaning: Int) {
+        self.secondRemaning = secondRemaning
+    }
+ }
