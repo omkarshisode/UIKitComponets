@@ -10,15 +10,15 @@ import UIKit
 class ViewController: UIViewController, CounterDelegate {
     
     func increaseCount(_ count: Int) {
-        countLable.text = String(count)
+        countLabel.text = String(count)
     }
         
-    private let countLable: AppLabel = {
-        let _appLable = AppLabel()
-        _appLable.text = "0"
-        _appLable.textColor = .gray
-        _appLable.translatesAutoresizingMaskIntoConstraints = false
-        return _appLable
+    private let countLabel: AppLabel = {
+        let _appLabel = AppLabel()
+        _appLabel.text = "0"
+        _appLabel.textColor = .gray
+        _appLabel.translatesAutoresizingMaskIntoConstraints = false
+        return _appLabel
     }()
     
     private let emailTextField: AppTextField = {
@@ -92,7 +92,7 @@ class ViewController: UIViewController, CounterDelegate {
             // Hide loader after 3 seconds
             Loader.hide()
             // Add the count label
-            self.addCountLable()
+            self.addCountLabel()
             self.increaseCountButton.addTarget(self, action: #selector(self.onIncreaseCountButtonClick), for: .touchUpInside)
             // Add the stack view to the actual view
             self.addButtonToStackView()
@@ -109,14 +109,14 @@ class ViewController: UIViewController, CounterDelegate {
         }
     }
     
-    private func addCountLable() {
-        view.addSubview(countLable)
+    private func addCountLabel() {
+        view.addSubview(countLabel)
         NSLayoutConstraint.activate([
-            countLable.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
-            countLable.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            countLable.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            countLable.heightAnchor.constraint(equalToConstant: 50),
-            countLable.widthAnchor.constraint(equalToConstant: 100),
+            countLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
+            countLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            countLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            countLabel.heightAnchor.constraint(equalToConstant: 50),
+            countLabel.widthAnchor.constraint(equalToConstant: 100),
         ])
     }
     /// Prepare stack view and add the parent view
@@ -215,4 +215,3 @@ class ViewController: UIViewController, CounterDelegate {
     @objc private func onIncreaseCountButtonClick() {
     }
 }
-

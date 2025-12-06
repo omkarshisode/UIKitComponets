@@ -12,15 +12,15 @@ class AppLabel: UILabel {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.stupUI()
+        self.setUpUI()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        self.stupUI()
+        self.setUpUI()
     }
     
-    private func stupUI() {
+    private func setUpUI() {
         self.font = AppFonts.shared.headingRegular
     }
     
